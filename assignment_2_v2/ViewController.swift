@@ -11,14 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var greetingText: UILabel!
-    
-    @IBAction func iJustGotHere(_ sender: UIButton) {
-        greetingText.text = "Hello"
-    }
 
-    @IBAction func imLeaving(_ sender: UIButton) {
-        greetingText.text = "Goodbye"
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        if (sender.tag == 1) {
+            greetingText.text = "Hello"
+        } else if (sender.tag == 2) {
+            greetingText.text = "Goodbye"
+        }
     }
-
 }
 
